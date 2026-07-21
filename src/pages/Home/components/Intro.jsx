@@ -6,7 +6,7 @@ const second = "PURPOSE.";
 
 const Intro = () => {
   return (
-    <div className=' h-30 w-100 mr-20 mt-80 text-white '>
+    <div className=' h-30 w-100 mr-20 mt-75 text-white '>
         <p className='font-[satoshi-regular] text-[#e2e0e0] '>I build full-stack web applications where thoughtful design meets reliable engineering. Every feature has a purpose, every line of code has a reason. I create fast, scalable, and user-focused digital experiences with clean code, modern technologies, and intuitive design.</p>
   <h3 className="text-3xl flex flex-wrap leading-0.8">
       {first.split("").map((char, index) => (
