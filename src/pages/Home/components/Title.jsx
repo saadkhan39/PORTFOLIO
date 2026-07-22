@@ -5,9 +5,29 @@ const line2 = "DEVELOPER";
 
 export default function Title() {
   return (
-    <div className=" pl-23 pt-38">
-       
-         <h1 className="text-[120px] text-white    font-[staatliches] leading-[0.8]">
+    <div
+      className="
+        pl-[1.25rem]
+        pt-[3rem]
+        sm:pl-[2rem]
+        sm:pt-[5rem]
+        lg:pl-[5vw]
+        lg:pt-[8vh]
+      "
+    >
+      <h1
+        className="
+          font-[staatliches]
+          text-white
+          whitespace-nowrap
+          leading-[0.85]
+
+          text-[3.25rem]
+          sm:text-[4.5rem]
+          md:text-[5.625rem]
+          lg:text-[7.5rem]
+        "
+      >
         {line1.split("").map((char, index) => (
           <span key={index} className="overflow-hidden inline-block">
             <motion.span
@@ -24,7 +44,8 @@ export default function Title() {
             </motion.span>
           </span>
         ))}
-       <br />
+
+        <br />
 
         {line2.split("").map((char, index) => (
           <span key={index} className="overflow-hidden inline-block">

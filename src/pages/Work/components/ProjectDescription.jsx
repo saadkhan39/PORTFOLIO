@@ -2,54 +2,99 @@ import React from "react";
 
 const ProjectDescription = ({ project }) => {
   return (
-    <div className="description  text-white  ">
-      <div className="w-[650px] ">
+    <div className="text-white w-full">
+      <div className="w-full max-w-[40rem]">
 
-        <h1 className="font-[font2] text-4xl mb-3">
+        <h1
+          className="
+            font-[font2]
+            text-[2rem]
+            sm:text-[2.25rem]
+            mb-[0.75rem]
+          "
+        >
           DESCRIPTION
         </h1>
 
-        <p className="font-[satoshi-regular] text-lg text-[#e2e0e0] leading-[1.2] mb-10">
+        <p
+          className="
+            font-[satoshi-regular]
+            text-[#e2e0e0]
+            text-[1rem]
+            sm:text-[1.1rem]
+            leading-[1.4]
+            mb-[2.5rem]
+          "
+        >
           {project.description}
         </p>
 
-        <div className="flex  gap-10  ">
-
-          <div className=" ">
-            <h1 className="text-3xl font-[font2] mb-3">
+        <div
+          className="
+            flex
+            flex-col
+            sm:flex-row
+            gap-[2.5rem]
+          "
+        >
+          {/* Tech Stack */}
+          <div className="flex-1">
+            <h1
+              className="
+                font-[font2]
+                text-[1.75rem]
+                mb-[0.75rem]
+              "
+            >
               TECH STACK
             </h1>
 
-          <ul className="  ">
-  {project.techStack.map((tech) => (
-    <li
-      key={tech}
-      className="  text-[#e2e0e0] text-sm"
-    >
-      • {tech}
-    </li>
-  ))}
-</ul>
+            <ul className="space-y-[0.35rem]">
+              {project.techStack.map((tech) => (
+                <li
+                  key={tech}
+                  className="
+                    text-[#e2e0e0]
+                    text-[0.95rem]
+                    font-[satoshi-regular]
+                  "
+                >
+                  • {tech}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div>
-            <h1 className="text-3xl font-[font2] mb-3">
+          {/* Highlights */}
+          <div className="flex-1">
+            <h1
+              className="
+                font-[font2]
+                text-[1.75rem]
+                mb-[0.75rem]
+              "
+            >
               HIGHLIGHTS
             </h1>
 
-            <ul className="space-y-2">
+            <ul className="space-y-[0.5rem]">
               {project.highlight.map((item) => (
                 <li
                   key={item}
-                  className="text-[#e2e0e0] text-sm leading-[0.8] font-[satoshi-regular]"
+                  className="
+                    text-[#e2e0e0]
+                    text-[0.95rem]
+                    leading-[1.3]
+                    font-[satoshi-regular]
+                  "
                 >
                   • {item}
                 </li>
               ))}
             </ul>
           </div>
-
         </div>
+
       </div>
     </div>
   );

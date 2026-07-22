@@ -2,17 +2,37 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const BigImage = ({ activeProject }) => {
-  const navigate = useNavigate(); // ✅ Correct spelling
+  const navigate = useNavigate();
 
   return (
     <div
       onClick={() => navigate(`/work/${activeProject.slug}`)}
-      className="h-[300px] w-[620px] overflow-hidden rounded-xl cursor-pointer ml-40"
+      className="
+  
+        w-full
+        max-w-[38rem]
+        h-[40vh]
+        sm:h-[45vh]
+        lg:w-[38rem]
+        lg:h-[18.75rem]
+        overflow-hidden
+        cursor-pointer
+       
+      
+      "
     >
       <img
         src={activeProject.image}
         alt={activeProject.title}
-        className="w-full h-full object-contain rounded-xl transition-all duration-500"
+        className="
+          w-full
+          h-full
+          object-contain
+          transition-all
+          duration-500
+          hover:scale-105
+          
+        "
       />
     </div>
   );

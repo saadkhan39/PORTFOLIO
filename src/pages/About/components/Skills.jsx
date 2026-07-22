@@ -1,10 +1,13 @@
+import React from "react";
+import { motion } from "motion/react";
+
 import {
   FaReact,
   FaNodeJs,
   FaHtml5,
   FaCss3Alt,
-  FaGitAlt,
   FaGithub,
+  FaGitAlt,
 } from "react-icons/fa";
 
 import {
@@ -13,176 +16,209 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiRedux,
- 
   SiSocketdotio,
   SiJsonwebtokens,
   SiGreensock,
   SiFramer,
   SiLangchain,
   SiPostman,
-
 } from "react-icons/si";
 
-import { motion } from "motion/react";
-
-export const skills = [
+const skills = [
   {
     name: "React",
-    icon: <FaReact className="text-4xl text-cyan-400" />,
-    className: "top-4 left-6 rotate-[-12deg]",
-  },
-  {
-    name: "GitHub",
-    icon: <FaGithub className="text-4xl text-white" />,
-    className: "top-4 right-6 rotate-[8deg]",
+    icon: <FaReact />,
+    color: "text-cyan-400",
   },
   {
     name: "Node.js",
-    icon: <FaNodeJs className="text-4xl text-green-500" />,
-    className: "top-16 left-40 rotate-[10deg]",
-  },
-  {
-    name: "HTML",
-    icon: <FaHtml5 className="text-4xl text-orange-500" />,
-    className: "top-20 right-20 rotate-[-15deg]",
-  },
-  {
-    name: "JavaScript",
-    icon: <SiJavascript className="text-4xl text-yellow-400" />,
-    className: "top-40 left-6 rotate-[14deg]",
-  },
-  {
-    name: "CSS",
-    icon: <FaCss3Alt className="text-4xl text-blue-500" />,
-    className: "top-36 right-8 rotate-[-10deg]",
-  },
-  {
-    name: "Tailwind",
-    icon: <SiTailwindcss className="text-4xl text-sky-400" />,
-    className: "top-46 left-28 rotate-[16deg]",
-  },
-  {
-    name: "Redux",
-    icon: <SiRedux className="text-4xl text-purple-500" />,
-    className: "top-52 right-24 rotate-[-14deg]",
-  },
-  {
-    name: "Express",
-    icon: <SiExpress className="text-4xl text-white" />,
-    className: "top-[22rem] left-2 rotate-[10deg]",
+    icon: <FaNodeJs />,
+    color: "text-green-500",
   },
   {
     name: "MongoDB",
-    icon: <SiMongodb className="text-4xl text-green-500" />,
-    className: "top-[18rem] right-6 rotate-[-8deg]",
+    icon: <SiMongodb />,
+    color: "text-green-400",
+  },
+  {
+    name: "Express",
+    icon: <SiExpress />,
+    color: "text-white",
+  },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript />,
+    color: "text-yellow-400",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss />,
+    color: "text-sky-400",
+  },
+  {
+    name: "Redux",
+    icon: <SiRedux />,
+    color: "text-purple-500",
   },
   {
     name: "Socket.IO",
-    icon: <SiSocketdotio className="text-4xl text-white" />,
-    className: "top-[22rem] left-40 rotate-[15deg]",
-  },
-  {
-    name: "GSAP",
-    icon: <SiGreensock className="text-4xl text-lime-400" />,
-    className: "top-30 right-38 rotate-[-12deg]",
-  },
-  {
-    name: "Framer",
-    icon: <SiFramer className="text-4xl text-white" />,
-    className: "bottom-32 left-28 rotate-[-8deg]",
+    icon: <SiSocketdotio />,
+    color: "text-white",
   },
   {
     name: "JWT",
-    icon: <SiJsonwebtokens className="text-4xl text-pink-400" />,
-    className: "bottom-20 left-10 rotate-[-16deg]",
+    icon: <SiJsonwebtokens />,
+    color: "text-pink-400",
+  },
+  {
+    name: "GSAP",
+    icon: <SiGreensock />,
+    color: "text-lime-400",
+  },
+  {
+    name: "Framer Motion",
+    icon: <SiFramer />,
+    color: "text-white",
   },
   {
     name: "LangChain",
-    icon: <SiLangchain className="text-4xl text-emerald-400" />,
-    className: "bottom-16 right-18 rotate-[10deg]",
+    icon: <SiLangchain />,
+    color: "text-emerald-400",
   },
   {
     name: "Git",
-    icon: <FaGitAlt className="text-4xl text-orange-500" />,
-    className: "bottom-15 left-35 rotate-[-8deg]",
+    icon: <FaGitAlt />,
+    color: "text-orange-500",
+  },
+  {
+    name: "GitHub",
+    icon: <FaGithub />,
+    color: "text-white",
   },
   {
     name: "Postman",
-    icon: <SiPostman className="text-4xl text-orange-500" />,
-    className: "top-25 right-58 rotate-[-10deg]",
+    icon: <SiPostman />,
+    color: "text-orange-500",
+  },
+  {
+    name: "HTML",
+    icon: <FaHtml5 />,
+    color: "text-orange-600",
+  },
+  {
+    name: "CSS",
+    icon: <FaCss3Alt />,
+    color: "text-blue-500",
   },
 ];
 
-export default function Skills() {
-
-   const My = "MY";
-const Stack = " STACK";
+const Skills = () => {
   return (
-       <div className="text-white" >
-              {My.split("").map((char, index) => (
-                <span key={index} className="overflow-hidden inline-block">
-                  <motion.span
-                    className="inline-block font-[staatliches] text-6xl"
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{
-                      delay: index * 0.06,
-                      duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1],
-                    }}
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                </span>
-              ))}
-                {Stack.split("").map((char, index) => (
-                      <span key={index} className="overflow-hidden  text-6xl inline-block">
-                        <motion.span
-                          className="inline-block font-[font2]"
-                          initial={{ y: "100%", opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          transition={{
-                             delay: My.length * 0.06 + index * 0.06, // starts after ABOUT
-                        duration: 0.7,
-                        ease: [0.22, 1, 0.36, 1],
-                          }}
-                        >
-                          {char === " " ? "\u00A0" : char}
-                        </motion.span>
-                      </span>
-                    ))}
-  <motion.div animate={{
-    y: [0, -10, 0],
-    rotate: [0, 2, -2, 0],
-  }}
-  transition={{
-    duration: 4 + Math.random() * 2,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }} className="relative w-[380px] h-[420px]  ">
-  {skills.map((skill) => (
-    <div
-      key={skill.name}
-      className={`absolute ${skill.className}
-      flex items-center gap-3
-      rounded-2xl
-      bg-white/5
-      backdrop-blur-lg
-      border border-white/10
-      px-4 py-3
-      text-white
-      shadow-xl
-      transition-all duration-500
-      hover:scale-110
-      hover:rotate-0
-      hover:border-cyan-400
-      hover:shadow-cyan-400/40`}
+  <section className="w-full py-10 overflow-hidden">
+
+  <div className="mb-8">
+    <h2 className="text-white font-[font2] text-4xl sm:text-5xl leading-none">
+      MY STACK
+    </h2>
+
+    <p className="mt-3 text-[#cdcfd4] font-[satoshi-regular] text-sm sm:text-base">
+      Technologies which i am good at
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden">
+
+    {/* Left Fade */}
+    <div className="absolute left-0 top-0 z-20 h-full w-20 bg-gradient-to-r from-[#050B16] to-transparent" />
+
+    {/* Right Fade */}
+    <div className="absolute right-0 top-0 z-20 h-full w-20 bg-gradient-to-l from-[#050B16] to-transparent" />
+
+    <motion.div
+      className="flex gap-6 w-max"
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{
+        duration: 35,
+        ease: "linear",
+        repeat: Infinity,
+      }}
     >
-      {skill.icon}
-      {/* <span className="font-medium">{skill.name}</span> */}
-    </div>
-  ))}
-</motion.div>
-       </div>
+      {[...skills, ...skills].map((skill, index) => (
+       <div
+  key={index}
+  className="
+    group
+    relative
+    overflow-hidden
+
+    w-[90px]
+    h-[90px]
+
+    rounded-xl
+
+    border
+    border-white/10
+
+    bg-white/[0.03]
+    backdrop-blur-xl
+
+    flex
+    flex-col
+    items-center
+    justify-center
+
+    transition-all
+    duration-500
+
+    hover:border-cyan-400
+  "
+>
+  {/* Hover Background */}
+  <span
+    className="
+      absolute
+      inset-0
+
+      translate-y-full
+      rounded-3xl
+
+      bg-cyan-400
+
+      transition-all
+      duration-500
+
+      group-hover:translate-y-0
+      group-hover:rounded-none
+    "
+  />
+
+  {/* Icon */}
+  <span
+    className={`
+      relative
+      z-10
+
+      ${skill.color}
+
+      text-[2.4rem]
+
+      transition-all
+      duration-500
+
+      group-hover:text-black
+      group-hover:scale-125
+    `}
+  >
+    {skill.icon}
+  </span>
+
+ 
+</div>
+      ))}
+    </motion.div>
+  </div>
+</section>
   );
-}
+};
+
+export default Skills;

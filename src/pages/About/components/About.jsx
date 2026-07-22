@@ -1,24 +1,50 @@
-import React from 'react'
-import Header from './Header'
+import React from "react";
+import Header from "./Header";
 import bgImg from "../../../assets/bg-img.png";
-import Para from './Para';
-import Skills from './Skills';
-
+import Para from "./Para";
+import Skills from "./Skills";
 
 const About = () => {
   return (
-    <main className="h-screen w-full bg-cover bg-center px-25 py-18  flex gap-20 "
-      style={{ backgroundImage: `url(${bgImg})` }}>
+    <main
+      className="
+        min-h-screen
+        w-full
+        bg-cover
+        bg-center
 
-        <div>
-            <Header/>
-        <Para/>
+        px-5
+        py-10
+
+        sm:px-8
+        md:px-10
+        lg:px-[4vw]
+        lg:py-[4vh]
+      "
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
+      <div
+        className="
+          w-full
+          max-w-[1600px]
+          mx-auto
+
+          flex
+          flex-col
+          gap-12
+        "
+      >
+        <div className="w-full">
+          <Header />
+          <Para />
         </div>
-        <div>
-            <Skills/>
+
+        <div className="w-full">
+          <Skills />
         </div>
+      </div>
     </main>
-  )
-}
+  );
+};
 
-export default About
+export default About;
