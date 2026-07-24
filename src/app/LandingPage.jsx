@@ -2,6 +2,7 @@ import Home from "../pages/Home/components/Home";
 import About from "../pages/About/components/About";
 import Work from "../pages/Work/components/Work";
 import Contact from "../pages/Contact/components/Contact";
+import Skills from "../pages/Skills/Skills";
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,10 @@ export default function LandingPage() {
         <About />
       </section>
 
+      <section id="contact">
+        <Skills />
+      </section> 
+
      <section id="work">
         <Work />
       </section>
@@ -21,6 +26,8 @@ export default function LandingPage() {
       <section id="contact">
         <Contact />
       </section> 
+
+      
     </>
   );
 }

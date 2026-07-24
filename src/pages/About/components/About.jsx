@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import bgImg from "../../../assets/bg-img.png";
 import Para from "./Para";
-import Skills from "./Skills";
 
 const About = () => {
   return (
@@ -39,9 +38,7 @@ const About = () => {
           <Para />
         </div>
 
-        <div className="w-full">
-          <Skills />
-        </div>
+       
       </div>
     </main>
   );
