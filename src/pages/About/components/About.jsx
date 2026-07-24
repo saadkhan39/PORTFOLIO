@@ -31,7 +31,7 @@ const About = () => {
 
           flex
           flex-col
-          gap-12
+          gap-1
         "
       >
         <div className="w-full">

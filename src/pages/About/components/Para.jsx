@@ -36,9 +36,10 @@ const Para = () => {
           alt="About"
           className="
             w-full
-            max-w-[650px]
+            max-w-[700px]
             h-auto
             object-cover
+            bg-red-200
           "
         />
       </motion.div>

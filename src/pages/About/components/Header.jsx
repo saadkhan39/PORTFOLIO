@@ -1,31 +1,29 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const Header = () => {
-  const About = "ABOUT";
-  const Me = " ME";
-
+const Header = ({ first = "ABOUT", second = " ME" }) => {
   return (
     <div className="w-full max-w-[40rem] text-white">
       <h1
         className="
+          pl-4 sm:pl-6 lg:pl-10
           leading-none
           whitespace-nowrap
 
-          text-[3rem]
-          sm:text-[4rem]
-          md:text-[5rem]
-          lg:text-[5rem]
+          text-5xl
+          sm:text-6xl
+          md:text-7xl
+          lg:text-8xl
         "
       >
-        {About.split("").map((char, index) => (
-          <span key={index} className="overflow-hidden inline-block">
+        {first.split("").map((char, index) => (
+          <span key={index} className="inline-block overflow-hidden">
             <motion.span
               className="inline-block font-[font1]"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
-                delay: index * 0.06,
+                delay: index * 0.05,
                 duration: 0.7,
                 ease: [0.22, 1, 0.36, 1],
               }}
@@ -35,14 +33,14 @@ const Header = () => {
           </span>
         ))}
 
-        {Me.split("").map((char, index) => (
-          <span key={index} className="overflow-hidden inline-block">
+        {second.split("").map((char, index) => (
+          <span key={index} className="inline-block overflow-hidden">
             <motion.span
               className="inline-block font-[font2]"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
-                delay: About.length * 0.06 + index * 0.06,
+                delay: first.length * 0.05 + index * 0.05,
                 duration: 0.7,
                 ease: [0.22, 1, 0.36, 1],
               }}

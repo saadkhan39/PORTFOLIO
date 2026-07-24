@@ -12,7 +12,7 @@ export default function Title() {
         sm:pl-[2rem]
         sm:pt-[5rem]
         lg:pl-[5vw]
-        lg:pt-[8vh]
+        lg:pt-[5vh]
       "
     >
       <h1

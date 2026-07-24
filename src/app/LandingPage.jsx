@@ -1,7 +1,7 @@
 import Home from "../pages/Home/components/Home";
 import About from "../pages/About/components/About";
 import Work from "../pages/Work/components/Work";
-// import Contact from "../pages/Contact/components/Contact";
+import Contact from "../pages/Contact/components/Contact";
 
 export default function LandingPage() {
   return (
@@ -18,9 +18,9 @@ export default function LandingPage() {
         <Work />
       </section>
 
-      {/* <section id="contact">
+      <section id="contact">
         <Contact />
-      </section>  */}
+      </section> 
     </>
   );
 }

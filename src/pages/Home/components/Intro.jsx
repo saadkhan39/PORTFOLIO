@@ -21,9 +21,9 @@ const Intro = () => {
         className="
           font-[satoshi-regular]
           text-[#e2e0e0]
-          text-[0.95rem]
+          text-[1rem]
           sm:text-[1rem]
-        leading-[1.5]
+        leading-[1.1]
        
         "
       >
@@ -75,6 +75,113 @@ const Intro = () => {
           </span>
         ))}
       </h3>
+      <div className="flex gap-[1.2rem]">
+             <a
+  href="https://www.linkedin.com/in/saadkh3930/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button
+    className="
+      group
+      relative
+      inline-flex
+      items-center
+      justify-center
+      overflow-hidden
+
+      mt-5
+
+      px-6
+      py-1.5
+
+      border
+      border-white
+
+      font-[font2]
+      text-lg
+      cursor-pointer
+    "
+  >
+    <span
+      className="
+        absolute
+        inset-0
+        bg-white
+        translate-y-full
+        transition-all
+        duration-500
+        group-hover:translate-y-0
+      "
+    />
+
+    <span
+      className="
+        relative
+        z-10
+        transition-colors
+        duration-500
+        group-hover:text-black
+      "
+    >
+      LET'S COLLABORATE
+    </span>
+  </button>
+</a>
+
+     <a
+  href="mailto:khansaad3930@gmail.com?subject=Hiring%20Opportunity&body=Hi%20Saad,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you."
+>
+  <button
+    className="
+      group
+      relative
+      inline-flex
+      items-center
+      justify-center
+      overflow-hidden
+
+      mt-5
+
+      px-6
+      py-1.5
+
+      border
+      border-white
+
+      font-[font2]
+      text-lg
+      cursor-pointer
+    "
+  >
+    {/* Hover Background */}
+    <span
+      className="
+        absolute
+        inset-0
+        bg-white
+        translate-y-full
+        transition-all
+        duration-500
+        group-hover:translate-y-0
+      "
+    />
+
+    {/* Text */}
+    <span
+      className="
+        relative
+        z-10
+        transition-colors
+        duration-500
+        group-hover:text-black
+      "
+    >
+      HIRE ME
+    </span>
+  </button>
+</a>
+      </div>
     </div>
   );
 };
