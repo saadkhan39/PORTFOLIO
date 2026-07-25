@@ -6,7 +6,8 @@ const line2 = "DEVELOPER";
 
 export default function Title() {
   return (
-    <div className="pl-[2rem] pt-[3rem] sm:pl-[2rem] sm:pt-[5rem] lg:pl-[5vw] lg:pt-[5vh]">
+    // Changed pt-[3rem] to pt-0 on mobile, keeping original desktop padding
+    <div className="pl-[1.25rem] pt-0 sm:pl-[2rem] sm:pt-[5rem] lg:pl-[5vw] lg:pt-[5vh]">
       <h1
         aria-label={`${line1} ${line2}`}
         className="

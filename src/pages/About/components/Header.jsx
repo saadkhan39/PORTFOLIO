@@ -38,7 +38,7 @@ const Header = ({ first = "ABOUT", second = " ME" }) => {
         viewport={{ once: true, amount: 0.2 }}
         className="
           pl-2 sm:pl-4 lg:pl-6
-          leading-none
+          leading-[0.7]
           whitespace-nowrap
           text-5xl sm:text-6xl md:text-7xl lg:text-8xl
         "

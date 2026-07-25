@@ -15,19 +15,18 @@ export default function LandingPage() {
         <About />
       </section>
 
-      <section id="contact">
+      {/* ✅ Changed id="contact" to id="skills" */}
+      <section id="skills">
         <Skills />
       </section> 
 
-     <section id="work">
+      <section id="work">
         <Work />
       </section>
 
       <section id="contact">
         <Contact />
       </section> 
-
-      
     </>
   );
 }

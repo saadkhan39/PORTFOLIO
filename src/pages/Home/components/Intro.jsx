@@ -7,7 +7,8 @@ const second = "PURPOSE.";
 
 const Intro = () => {
   return (
-    <div className="w-full max-w-[25rem] px-[1.25rem] mt-[2.5rem] lg:mt-[32vh] lg:mr-[5vw] text-white">
+    // Changed mt-[2.5rem] to mt-2 on mobile (sm:mt-8 restored for tablet/desktop)
+    <div className="w-full max-w-[25rem] px-[1.25rem] mt-2 sm:mt-8 lg:mt-[32vh] lg:mr-[5vw] text-white">
       <p className="font-[satoshi-regular] text-[#e2e0e0] text-[1rem] leading-[1.2]">
         I build full-stack web applications where thoughtful design meets
         reliable engineering. Every feature has a purpose, every line of code
