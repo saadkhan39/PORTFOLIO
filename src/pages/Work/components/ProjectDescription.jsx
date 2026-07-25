@@ -1,10 +1,15 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const ProjectDescription = ({ project }) => {
   return (
-    <div className="text-white w-full">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="text-white w-full"
+    >
       <div className="w-full max-w-[40rem]">
-
         <h1
           className="
             font-[font2]
@@ -94,9 +99,8 @@ const ProjectDescription = ({ project }) => {
             </ul>
           </div>
         </div>
-
       </div>
-    </div>
+    </motion.div>
   );
 };
 

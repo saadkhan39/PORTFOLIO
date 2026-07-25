@@ -38,7 +38,6 @@ export const projects = [
       "Responsive and modern UI",
     ],
   },
-
   {
     title: "Sundown Studio",
     image: SundownStudioImg,
@@ -62,7 +61,6 @@ export const projects = [
       "Interactive scrolling effects",
     ],
   },
-
   {
     title: "Lazarev",
     image: LazarevImg,
@@ -86,7 +84,6 @@ export const projects = [
       "Responsive design",
     ],
   },
-
   {
     title: "K72",
     image: K72Img,
@@ -111,7 +108,7 @@ const Work = () => {
 
   return (
     <main
-      className="min-h-screen w-full bg-cover bg-center"
+      className="min-h-screen w-full bg-cover bg-center overflow-x-hidden"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div
@@ -127,12 +124,12 @@ const Work = () => {
         {/* Hero Image */}
         <div
           className="
-              flex
-    justify-center
-    lg:justify-end
-    w-full
-    pt-[2rem]
-    lg:pt-[4rem]
+            flex
+            justify-center
+            lg:justify-end
+            w-full
+            pt-[2rem]
+            lg:pt-[4rem]
           "
         >
           <BigImage activeProject={activeProject} />

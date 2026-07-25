@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 
 const SocialLinks = ({ text, href }) => {
-     return (
+  return (
     <a
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
@@ -17,14 +18,14 @@ const SocialLinks = ({ text, href }) => {
           h-[1.6rem]
         "
       >
-        {/* Original Text */}
+        {/* Default Text State */}
         <motion.div
           className="flex uppercase"
           variants={{
             initial: {},
             hover: {
               transition: {
-                staggerChildren: 0.03,
+                staggerChildren: 0.02,
               },
             },
           }}
@@ -32,14 +33,14 @@ const SocialLinks = ({ text, href }) => {
           {text.split("").map((char, index) => (
             <motion.span
               key={index}
-              className="inline-block font-[font1] text-lg"
+              className="inline-block font-[font1] text-lg text-white"
               variants={{
                 initial: { y: 0 },
                 hover: { y: "-100%" },
               }}
               transition={{
-                duration: 0.35,
-                ease: "easeInOut",
+                duration: 0.3,
+                ease: [0.22, 1, 0.36, 1],
               }}
             >
               {char === " " ? "\u00A0" : char}
@@ -47,14 +48,14 @@ const SocialLinks = ({ text, href }) => {
           ))}
         </motion.div>
 
-        {/* Hover Text */}
+        {/* Hover Text State (Glitch/Cyan effect) */}
         <motion.div
-          className="absolute left-0 top-0 flex uppercase text-cyan-600"
+          className="absolute left-0 top-0 flex uppercase text-cyan-400"
           variants={{
             initial: {},
             hover: {
               transition: {
-                staggerChildren: 0.03,
+                staggerChildren: 0.02,
               },
             },
           }}
@@ -68,8 +69,8 @@ const SocialLinks = ({ text, href }) => {
                 hover: { y: 0 },
               }}
               transition={{
-                duration: 0.35,
-                ease: "easeInOut",
+                duration: 0.3,
+                ease: [0.22, 1, 0.36, 1],
               }}
             >
               {char === " " ? "\u00A0" : char}
@@ -79,7 +80,6 @@ const SocialLinks = ({ text, href }) => {
       </motion.div>
     </a>
   );
-  
-}
+};
 
-export default SocialLinks
+export default SocialLinks;

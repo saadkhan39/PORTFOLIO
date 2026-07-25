@@ -1,7 +1,33 @@
 @import "tailwindcss";
 
+/* Lenis Recommended CSS */
+html.lenis, 
+html.lenis body {
+  height: auto;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
 
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Base Body Styles */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Font Definitions */
 @font-face {
   font-family: "clean-bold";
   src: url("../fonts/AdobeClean-Bold.otf") format("opentype");
@@ -10,35 +36,30 @@
 
 @font-face {
   font-family: "clean-regular";
-  src: url("../fonts//AdobeClean-Regular.otf") format("opentype");
+  src: url("../fonts/AdobeClean-Regular.otf") format("opentype");
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "satoshi-regular";
-  src: url("../fonts/Satoshi-Regular-CPM9dct4.woff2") format("opentype");
+  src: url("../fonts/Satoshi-Regular-CPM9dct4.woff2") format("woff2");
   font-style: normal;
 }
-
-
 
 @font-face {
   font-family: "staatliches";
-  src: url("../fonts/Staatliches-Regular.ttf") format("opentype");
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "font1";
-  src: url("../fonts/HI_OiY8KO6hCsQSoAPmtMYebvpCfOMPT.woff2") format("opentype");
+  src: url("../fonts/HI_OiY8KO6hCsQSoAPmtMYebvpCfOMPT.woff2") format("woff2");
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "font2";
-  src: url("../fonts/-W_gXIrsVjjeyEnPC45qD2NoFPtBE0xCh2AOrR8P-8B_dw.woff2") format("opentype");
+  src: url("../fonts/-W_gXIrsVjjeyEnPC45qD2NoFPtBE0xCh2AOrR8P-8B_dw.woff2") format("woff2");
   font-style: normal;
 }

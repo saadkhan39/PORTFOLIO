@@ -9,26 +9,35 @@ import Name from "./Name";
 const Home = () => {
   return (
     <main
-      className="min-h-screen w-full bg-cover bg-center overflow-hidden flex flex-col justify-between"
-      style={{ backgroundImage: `url(${myImg})` }}
+      className="
+        relative min-h-screen w-full 
+        bg-neutral-950 bg-cover bg-center bg-no-repeat 
+        flex flex-col justify-between 
+        overflow-x-hidden
+      "
+      style={{
+        backgroundImage: ` url(${myImg})`,
+      }}
     >
-      {/* Top */}
-      <div className="flex items-center justify-between px-[2vw] lg:px-[3vw] pt-[2vh]">
+      {/* Top Header Row */}
+      <header className="relative z-10 flex items-center justify-between px-[2vw] lg:px-[3vw] pt-[2vh] w-full">
         <Name />
         <Navbar />
         <Resume />
-      </div>
+      </header>
 
-      {/* Bottom */}
-      <div className="flex flex-col lg:flex-row justify-between px-[2vw] lg:px-[3vw] pb-[4vh]">
-        <div className="flex flex-1 items-start">
+      {/* Hero Content Area */}
+      <section className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-end px-[2vw] lg:px-[3vw] pb-[4vh] w-full gap-8 lg:gap-0 mt-auto">
+        {/* Left Side: Main Title */}
+        <div className="w-full lg:w-auto">
           <Title />
         </div>
 
-        <div className="flex justify-end">
+        {/* Right Side: Intro & Action Buttons */}
+        <div className="w-full lg:w-auto flex justify-start lg:justify-end">
           <Intro />
         </div>
-      </div>
+      </section>
     </main>
   );
 };

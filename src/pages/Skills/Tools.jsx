@@ -1,34 +1,27 @@
+import React, { useState } from "react";
 import { FaGitAlt, FaGithub, FaTools } from "react-icons/fa";
-import {
-  SiPostman,
-  SiGreensock,
-  SiFramer,
-} from "react-icons/si";
+import { SiPostman, SiGreensock, SiFramer } from "react-icons/si";
+import bgImg from "../../assets/bg-img.png"; 
 
 const toolSkills = [
-  { icon: <FaGitAlt />, color: "text-orange-500" },
-  { icon: <FaGithub />, color: "text-white" },
-  { icon: <SiPostman />, color: "text-orange-400" },
-  { icon: <SiGreensock />, color: "text-lime-400" },
-  { icon: <SiFramer />, color: "text-pink-400" },
+  { icon: <FaGitAlt />, color: "group-hover:text-orange-500" },
+  { icon: <FaGithub />, color: "group-hover:text-white" },
+  { icon: <SiPostman />, color: "group-hover:text-orange-400" },
+  { icon: <SiGreensock />, color: "group-hover:text-lime-400" },
+  { icon: <SiFramer />, color: "group-hover:text-pink-400" },
 ];
 
 export default function Tools() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <div
-      className="
-        w-full
-        max-w-[21.25rem]
-
-        h-[45vh]
-        sm:h-[50vh]
-        md:h-[55vh]
-        lg:h-[60vh]
-      "
+      onClick={() => setIsFlipped(!isFlipped)}
+      className="w-full h-[45vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] cursor-pointer"
     >
-      <div className="group w-full h-full [perspective:1200px]">
+      <div className="group w-full h-full [perspective:75rem]">
         <div
-          className="
+          className={`
             relative
             w-full
             h-full
@@ -36,180 +29,128 @@ export default function Tools() {
             duration-700
             [transform-style:preserve-3d]
             group-hover:[transform:rotateY(180deg)]
-          "
+            ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
+          `}
         >
           {/* ================= FRONT ================= */}
-
           <div
+            style={{ backgroundImage: `url(${bgImg})` }}
             className="
               absolute
               inset-0
-
-              rounded-[1.5rem]
-
               border
-              border-orange-400/20
-
-              bg-gradient-to-br
-              from-[#07111f]
-              via-[#0b1a30]
-              to-[#122846]
-
+              border-white/20
+              bg-cover
+              bg-center
               overflow-hidden
-              backdrop-blur-xl
-
-              shadow-[0_0_2.5rem_rgba(251,146,60,.08)]
-
               flex
               flex-col
-              justify-center
-              items-center
-
+              justify-between
+              p-6
+              sm:p-8
               [backface-visibility:hidden]
+              transition-colors
+              duration-500
+              hover:border-white/40
             "
           >
-            {/* Glow */}
-
-            <div className="absolute w-[14rem] h-[14rem] lg:w-[16vw] lg:h-[16vw] rounded-full bg-orange-500/10 blur-3xl" />
-
-            {/* Icon */}
-
-            <div
-              className="
-                relative
-                z-10
-
-                w-[5rem]
-                h-[5rem]
-
-                sm:w-[6rem]
-                sm:h-[6rem]
-
-                lg:w-[7rem]
-                lg:h-[7rem]
-
-                rounded-full
-
-
-                bg-orange-500/10
-
-                border
-                border-orange-400/20
-
-                flex
-                items-center
-                justify-center
-              "
-            >
-              <FaTools className="text-[2.8rem] lg:text-[3.5vw] text-orange-400" />
+            {/* Top Badge */}
+            <div className="flex justify-between items-center w-full">
+              <span className="font-[font2] text-xs text-gray-400 tracking-widest uppercase">
+                03 // STACK
+              </span>
             </div>
 
-            <h2
-              className="
-                mt-[1.5rem]
+            {/* Center Content */}
+            <div className="flex flex-col items-center justify-center text-center">
+              <div
+                className="
+                  relative
+                  z-10
+                  w-16
+                  h-16
+                  sm:w-20
+                  sm:h-20
+                  border
+                  border-white/20
+                  flex
+                  items-center
+                  justify-center
+                  mb-6
+                  bg-black/30
+                  backdrop-blur-sm
+                "
+              >
+                <FaTools className="text-2xl sm:text-3xl text-white" />
+              </div>
 
-                text-[2rem]
-                sm:text-[2.4rem]
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[font1] tracking-wide text-white leading-none">
+                TOOLS
+              </h2>
 
-                font-[font2]
-                tracking-[0.2em]
-                text-white
-              "
-            >
-              TOOLS
-            </h2>
+              <p className="mt-3 text-xs sm:text-sm font-[satoshi-regular] text-[#e2e0e0] uppercase tracking-widest">
+                DEVELOPER TOOLKIT
+              </p>
+            </div>
 
-                       <p className="mt-[0.75rem] text-[0.75rem] sm:text-[0.875rem] text-gray-400 uppercase tracking-[0.25em]">
-
-              Developer Toolkit
-            </p>
-
-            <span className="absolute bottom-[1.75rem] text-[0.65rem] sm:text-[0.75rem] tracking-[0.35em] uppercase text-gray-500">
-              Hover Me
-            </span>
+            {/* Bottom Hint */}
+            <div className="w-full text-center">
+              <span className="text-[0.7rem] sm:text-xs font-[font2] tracking-[0.3em] uppercase text-gray-500">
+                [ HOVER / TAP TO REVEAL ]
+              </span>
+            </div>
           </div>
 
           {/* ================= BACK ================= */}
-
           <div
+            style={{ backgroundImage: `url(${bgImg})` }}
             className="
               absolute
               inset-0
-
-              rounded-[1.5rem]
-
               border
-              border-orange-400/20
-
-              bg-gradient-to-br
-              from-[#07111f]
-              via-[#081525]
-              to-[#0d233d]
-
-              p-[1.5rem]
-              lg:p-[2vw]
-
-              flex
-              flex-col
-              justify-center
-
+              border-white/20
+              bg-cover
+              bg-center
               [backface-visibility:hidden]
               [transform:rotateY(180deg)]
+              p-6
+              sm:p-8
+              flex
+              flex-col
+              justify-between
             "
           >
-            <h3
-              className="
-                text-[1.8rem]
-                lg:text-[1.7vw]
+            <div className="flex justify-between items-center border-b border-white/10 pb-3">
+              <h3 className="text-xl sm:text-2xl text-white font-[font2] tracking-wider">
+                TOOLKIT
+              </h3>
+              <span className="font-[font2] text-xs text-gray-400">03</span>
+            </div>
 
-                text-center
-                text-white
-
-                font-[font2]
-                tracking-wider
-
-                mb-[2rem]
-              "
-            >
-              TOOLKIT
-            </h3>
-
-            <div className="grid grid-cols-3 gap-[0.9rem] lg:gap-[1vw]">
+            {/* Icons Grid */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 my-auto">
               {toolSkills.map((skill, index) => (
                 <div
                   key={index}
                   className="
-                   h-[3.5rem]
-                    sm:h-[4rem]
-
-                    rounded-[1rem]
-                    sm:rounded-[1.25rem]
-
-                    bg-white/5
-
+                    group
+                    h-14
+                    sm:h-16
                     border
-                    border-white/10
-
-                    backdrop-blur-md
-
+                    border-white/15
+                    bg-black/40
+                    backdrop-blur-sm
                     flex
                     items-center
                     justify-center
-
                     transition-all
                     duration-300
-
-                    hover:scale-110
-                    hover:border-orange-400
-                    hover:bg-orange-500/10
+                    hover:border-white
+                    hover:bg-white/10
                   "
                 >
-                 <span
-                    className={`
-                      text-[2rem]
-                      sm:text-[2.4rem]
-                      ${skill.color}
-                    `}
+                  <span
+                    className={`text-2xl sm:text-3xl text-gray-300 transition-colors duration-300 ${skill.color}`}
                   >
                     {skill.icon}
                   </span>
@@ -217,10 +158,8 @@ export default function Tools() {
               ))}
             </div>
 
-                        <p className="mt-[1.75rem] sm:mt-[2rem] lg:mt-[2.5rem] text-center text-[0.75rem] sm:text-[0.875rem] text-gray-400 leading-relaxed">
-
-              Modern tools for version control, animation and 
-              collaboration 
+            <p className="text-xs sm:text-sm font-[satoshi-regular] text-[#e2e0e0] leading-relaxed border-t border-white/10 pt-3">
+              Essential utilities for version control, APIs, animations & workflow.
             </p>
           </div>
         </div>

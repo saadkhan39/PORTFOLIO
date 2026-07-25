@@ -1,12 +1,13 @@
-import React from 'react'
-import AppRoutes from './AppRoutes'
+import React from 'react';
+import AppRoutes from './AppRoutes';
+import SmoothScroll from './SmoothScroll';
 
 const App = () => {
   return (
-   <div className="overflow-x-hidden">
-  <AppRoutes />
-</div>
-  )
-}
+    <SmoothScroll>
+      <AppRoutes />
+    </SmoothScroll>
+  );
+};
 
-export default App
+export default App;
